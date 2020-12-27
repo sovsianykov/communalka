@@ -162,9 +162,17 @@ class App extends Component {
 
     }
 
-
   }
-  render() {
+  buttonHandler = () => {
+  const button = document.querySelector('#save' )
+  const input = document.querySelector('input' )
+    input.addEventListener('Click', ()=> {
+      button.className = 'active'
+    } );
+  }
+
+
+      render() {
     return (
       <div className="container-fluid flex-column ">
         <div className="card dark">
@@ -202,8 +210,8 @@ class App extends Component {
                 </tr>
               </thead>
               {/*<tbody onClick={this.editHandler.bind(this)}>*/}
-              {/*<tbody onClick={this.saveHandler.bind(this)}>*/}
-              <tbody>
+              <tbody onClick={this.buttonHandler}>
+              {/*<tbody >*/}
                 <tr>
                   <th className="monthMame">January</th>
                   <td className='cell'>{this.state.months[0].re}</td>
@@ -241,7 +249,7 @@ class App extends Component {
                 />
               </tbody>
             </Table>
-            <Button variant='danger' onClick={this.saveHandler}>SAVE</Button>
+            <Button id="save" variant='danger' onClick={this.saveHandler.bind(this)}>SAVE AS NEW MONTH</Button>
           </div>
         </div>
       </div>

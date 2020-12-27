@@ -20,8 +20,15 @@ card {
 input, textarea {
   width: 100%;
   border: none;
+  text-align: center;
 
 }
 th, tr, td {
   text-align: center;
+}
+#save {
+  /*display: none;*/
+}
+.active {
+  display: block;
 }
