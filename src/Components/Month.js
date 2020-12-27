@@ -1,6 +1,6 @@
 import React from "react";
 
-const Month = (props) => {
+const Month = ( {month},props) => {
   return (
     <tr>
       <td >

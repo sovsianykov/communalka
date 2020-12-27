@@ -44,33 +44,40 @@ class App extends Component {
         sle: "6",
 
       },
-    ],
-    temp : [0,0,0,0,0,0,0,0,0,0,0,0]
+    ]
   };
-  iHandler1 = (event) => {
-    this.setState({
-      months: [
-        {
-          re: event.target.value,
-        },
-      ],
-    });
-  }; iHandler2 = (event) => {
-    this.setState({
-      months: [
-        {
-          dpe: event.target.value,
-        },
-      ],
-    });
-  }; iHandler3 = (event) => {
-    this.setState({
-      months: [
-        {
-          dbte: event.target.value,
-        },
-      ],
-    });
+  iHandler1 = (input) => {
+    setTimeout(()=>{
+          this.setState({
+              months: [
+                  {
+                      re: input.target.value,
+                  },
+              ],
+          });
+      },1000 )
+  };
+  iHandler2 = (event) => {
+      setTimeout(()=>{
+          this.setState({
+              months: [
+                  {
+                      dpe: event.target.value,
+                  },
+              ],
+          });
+      },1000 )
+  };
+  iHandler3 = (event) => {
+      setTimeout(()=>{
+          this.setState({
+              months: [
+                  {
+                      dbte: event.target.value,
+                  },
+              ],
+          });
+      },1000 )
   }; iHandler4 = (event) => {
     this.setState({
       months: [
@@ -145,7 +152,7 @@ class App extends Component {
     });
   };
 
-  saveHandler =() => {
+  saveHandler = async() => {
     let inputs = document.querySelectorAll('.i1')
     let cell = document.querySelectorAll('.cell')
     for ( let j=0; j< 12;j++) {
