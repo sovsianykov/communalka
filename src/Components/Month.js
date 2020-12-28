@@ -1,49 +1,55 @@
 import React from "react";
+import PropTypes from 'prop-types'
 
-const Month = ( {month},props) => {
+const Month = ({months}, props) => {
   return (
     <tr>
-      <td >
-        <span>Template</span>
-      </td>
-      <td>
-        <input className="i1" onChange={props.changed1} type="text" />
-      </td>
-      <td>
-        <input className="i1" onChange={props.changed2} type="text" />
-      </td>
-      <td>
-        <input className="i1" onChange={props.changed3} type="text" />
-      </td>
-      <td>
-        <input className="i1" onChange={props.changed4} type="text" />
-      </td>
-      <td>
-        <input className="i1" onChange={props.changed5} type="text" />
-      </td>
-      <td>
-        <input className="i1" onChange={props.changed6} type="text" />
-      </td>
-      <td>
-        <input className="i1" onChange={props.changed7} type="text" />
-      </td>
-      <td>
-        <input className="i1" onChange={props.changed8} type="text" />
-      </td>
-      <td>
-        <input className="i1" onChange={props.changed9} type="text" />
-      </td>
-      <td>
-        <input className="i1" onChange={props.changed10} type="text" />
-      </td>
-      <td>
-        <input className="i1" onChange={props.changed11} type="text" />
-      </td>
-      <td>
-        <input className="i1" onChange={props.changed12} type="text" />
-      </td>
+      {/*<td >*/}
+      {/*  <span>Template</span>*/}
+      {/*</td>*/}
+      {/*<td>*/}
+      {/*  <input className="i11" value={props.re} type="text" />*/}
+      {/*</td>*/}
+      {/*<td>*/}
+      {/*  <input className="i11" value={props.dpe} type="text" />*/}
+      {/*</td>*/}
+      {/*<td>*/}
+      {/*  <input className="i11" value={props.dbte} type="text" />*/}
+      {/*</td>*/}
+      {/*<td>*/}
+      {/*  <input className="i11" value={props.vle} type="text" />*/}
+      {/*</td>*/}
+      {/*<td>*/}
+      {/*  <input className="i11" value={props.we} type="text" />*/}
+      {/*</td>*/}
+      {/*<td>*/}
+      {/*  <input className="i11" value={props.wpe} type="text" />*/}
+      {/*</td>*/}
+      {/*<td>*/}
+      {/*  <input className="i11" value={props.wbte} type="text" />*/}
+      {/*</td>*/}
+      {/*<td>*/}
+      {/*  <input className="i11" value={props.wle} type="text" />*/}
+      {/*</td>*/}
+      {/*<td>*/}
+      {/*  <input className="i11" onChange={props.se} type="text" />*/}
+      {/*</td>*/}
+      {/*<td>*/}
+      {/*  <input className="i11" onChange={props.spe} type="text" />*/}
+      {/*</td>*/}
+      {/*<td>*/}
+      {/*  <input className="i11" onChange={props.sbte} type="text" />*/}
+      {/*</td>*/}
+      {/*<td>*/}
+      {/*  <input className="i11" onChange={props.se} type="text" />*/}
+      {/*</td>*/}
     </tr>
   );
 };
+
+Month.propTypes = {
+    months : PropTypes.object.isRequired
+}
+
 
 export default Month;
