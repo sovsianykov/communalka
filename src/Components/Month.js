@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const Month = ({months}, props) => {
   return (
-    <tr>
+    <tr id= 'month'>
       {/*<td >*/}
       {/*  <span>Template</span>*/}
       {/*</td>*/}
@@ -47,9 +47,9 @@ const Month = ({months}, props) => {
   );
 };
 
-Month.propTypes = {
-    months : PropTypes.object.isRequired
-}
-
-
+// Month.propTypes = {
+//     months : PropTypes.object.isRequired
+// }
+//
+//
 export default Month;
