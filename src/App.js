@@ -1,8 +1,10 @@
-import React, { Component } from "react";
+import React, { Component,ReactPropTypes } from "react";
 import "react-bootstrap-table-next/dist/react-bootstrap-table2.min.css";
 import Table from "react-bootstrap/Table";
 import Month from "./Components/Month";
 import {Button} from "react-bootstrap";
+import AllMonths from "./Components/AllMonths";
+
 
 class App extends Component {
   state = {
@@ -28,26 +30,26 @@ class App extends Component {
     monthForYear: [
       {
         id: 1,
-        completed: "false",
-        name: "January",
-        pe: "",
-        dpe: "45",
-        dbte: "",
-        vle: "12345",
-        we: "t",
-        wpe: "456",
-        wbte: "20-1-2020",
-        wle: "5",
-        se: "600",
-        spe: "888",
-        sbte: "20-1-2020",
-        sle: "6",
+        // completed: "false",
+        // name: "January",
+        // pe: "",
+        // dpe: "45",
+        // dbte: "",
+        // vle: "12345",
+        // we: "t",
+        // wpe: "456",
+        // wbte: "20-1-2020",
+        // wle: "5",
+        // se: "600",
+        // spe: "888",
+        // sbte: "20-1-2020",
+        // sle: "6",
 
       },
     ]
   };
   iHandler1 = (input) => {
-    setTimeout(()=>{
+
           this.setState({
               months: [
                   {
@@ -55,10 +57,10 @@ class App extends Component {
                   },
               ],
           });
-      },1000 )
+
   };
   iHandler2 = (event) => {
-      setTimeout(()=>{
+
           this.setState({
               months: [
                   {
@@ -66,7 +68,6 @@ class App extends Component {
                   },
               ],
           });
-      },1000 )
   };
   iHandler3 = (event) => {
       setTimeout(()=>{
@@ -77,7 +78,7 @@ class App extends Component {
                   },
               ],
           });
-      },1000 )
+      },500 )
   }; iHandler4 = (event) => {
     this.setState({
       months: [
@@ -150,26 +151,67 @@ class App extends Component {
         },
       ],
     });
+
+
   };
 
-  saveHandler = async() => {
+  saveHandler = () => {
     let inputs = document.querySelectorAll('.i1')
     let cell = document.querySelectorAll('.cell')
     for ( let j=0; j< 12;j++) {
       inputs[j].style.color = 'brown'
         cell[j].textContent = inputs[j].value
-      console.log(cell[j])
+
+
 
     }
 
+    // this.state.monthForYear.push(this.state.months[0])
+    // console.table(this.state.monthForYear)
+
+
   }
-  buttonHandler = () => {
-  const button = document.querySelector('#save' )
-  const input = document.querySelector('input' )
-    input.addEventListener('Click', ()=> {
-      button.className = 'active'
-    } );
+  newMonthHandler = ()=> {
+    let cell = document.querySelectorAll('.cell')
+    let tempArray = []
+    for ( let j=0; j< 12;j++) {
+     tempArray.push(cell[j].textContent)
+    }
+    this.setState( {
+      monthsForYear : [
+        {
+          id: 1,
+          completed: "false",
+          name: "January",
+          pe: tempArray[0],
+          dpe: tempArray[1],
+          dbte:tempArray[2],
+          vle: tempArray[3],
+          we: tempArray[4],
+          wpe: tempArray[5],
+          wbte: tempArray[6],
+          wle: tempArray[7],
+          se: tempArray[8],
+          spe: tempArray[9],
+          sbte: tempArray[10],
+          sle: tempArray[11]
+
+        },
+      ]
+    })
+
+  this.state.months.push(this.state.monthForYear[0])
   }
+
+
+
+  // buttonHandler = () => {
+  // const button = document.querySelector('#save' )
+  // const input = document.querySelector('input' )
+  //   input.addEventListener('Click', ()=> {
+  //     button.className = 'active'
+  //   } );
+  // }
 
 
       render() {
@@ -210,23 +252,33 @@ class App extends Component {
                 </tr>
               </thead>
               {/*<tbody onClick={this.editHandler.bind(this)}>*/}
-              <tbody onClick={this.buttonHandler}>
-              {/*<tbody >*/}
-                <tr>
-                  <th className="monthMame">January</th>
-                  <td className='cell'>{this.state.months[0].re}</td>
-                  <td className='cell'>{this.state.months[0].dpe}</td>
-                  <td className='cell'> {this.state.months[0].dbte}</td>
-                  <td  className='cell'>{this.state.months[0].vle}</td>
-                  <td className='cell'>{this.state.months[0].we}</td>
-                  <td className='cell'>{this.state.months[0].wpe}</td>
-                  <td className='cell'>{this.state.months[0].wbte}</td>
-                  <td className='cell'>{this.state.months[0].wle}</td>
-                  <td className='cell'>{this.state.months[0].se}</td>
-                  <td className='cell'>{this.state.months[0].spe}</td>
-                  <td className='cell'>{this.state.months[0].dbte}</td>
-                  <td className='cell'>{this.state.months[0].sle}</td>
-                </tr>
+              {/*<tbody onClick={this.buttonHandler}>*/}
+              <tbody >
+              <tr>
+                <th className="monthMame">January</th>
+                <td className='cell'>{this.state.months[0].re}</td>
+                <td className='cell'>{this.state.months[0].dpe}</td>
+                <td className='cell'> {this.state.months[0].dbte}</td>
+                <td  className='cell'>{this.state.months[0].vle}</td>
+                <td className='cell'>{this.state.months[0].we}</td>
+                <td className='cell'>{this.state.months[0].wpe}</td>
+                <td className='cell'>{this.state.months[0].wbte}</td>
+                <td className='cell'>{this.state.months[0].wle}</td>
+                <td className='cell'>{this.state.months[0].se}</td>
+                <td className='cell'>{this.state.months[0].spe}</td>
+                <td className='cell'>{this.state.months[0].dbte}</td>
+                <td className='cell'>{this.state.months[0].sle}</td>
+              </tr>
+              {this.state.months.map((month ,i) => {
+                return (
+                    <AllMonths months={month}
+                               key={i}
+
+                    />
+
+                )
+              })}
+
 
                 <Month
                   key={this.state.months[0].id}
@@ -249,7 +301,8 @@ class App extends Component {
                 />
               </tbody>
             </Table>
-            <Button id="save" variant='danger' onClick={this.saveHandler.bind(this)}>SAVE AS NEW MONTH</Button>
+            <Button id="save" variant='danger' onClick={this.saveHandler.bind(this)}>SAVE </Button>
+            <Button id="new" variant='primary'  onClick={this.newMonthHandler.bind(this)}> add to Year </Button>
           </div>
         </div>
       </div>

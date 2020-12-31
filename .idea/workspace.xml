@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c33886ee-1f21-43b3-bc41-e147b4324b37" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Month.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Month.js" afterDir="false" />
     </list>
     <disabled>
       <disabled_changelists>
@@ -23,9 +24,22 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -59,7 +73,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="560f6792-22e3-4607-adfe-a42fc56d31f9" name="Default Changelist" comment="" />
+      <changelist id="c33886ee-1f21-43b3-bc41-e147b4324b37" name="Default Changelist" comment="" />
       <created>1609017856090</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -68,6 +82,7 @@
       <workItem from="1609018443006" duration="4355000" />
       <workItem from="1609023517554" duration="20489000" />
       <workItem from="1609069338400" duration="6346000" />
+      <workItem from="1609143907298" duration="11578000" />
     </task>
     <task id="LOCAL-00001" summary="moning 2">
       <created>1609064877814</created>
@@ -90,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609088136018</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="nice variant 5">
+      <created>1609156601463</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1609156601463</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,6 +133,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="nice" />
-    <option name="LAST_COMMIT_MESSAGE" value="nice" />
+    <MESSAGE value="nice variant 4" />
+    <MESSAGE value="nice variant 5" />
+    <option name="LAST_COMMIT_MESSAGE" value="nice variant 5" />
   </component>
 </project>
